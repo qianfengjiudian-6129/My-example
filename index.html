@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{margin: 0; padding: 0;}
+			img{ width:400px;}
+			.ALL{ width: 650px; height: 300px; border: 1px #1B6D85 solid; margin: 50px auto;}
+			.DIV_1_title{ font-size: 18px; font-family: "微软雅黑";width: 645px; color: white; height: 30px; background: #1B6D85; line-height: 30px; padding-left: 5px;}
+			#all_div{ width: 500px;overflow: hidden;height: 200px; padding: 30px;}
+	
+		</style>
+	</head>
+
+	<body>
+		<div class="ALL">
+			<div class="DIV_1_title">图片向上滚动</div>
+			<div id="all_div">
+				<div id="div_1">
+					<!-- <ol>
+						<li>贾静雯女儿梧桐妹与好友学做蛋糕 心灵手巧心情靓</li>
+						<li>郎朗再回应没帮老婆拎包：现在看见包就粘上去</li>
+						<li>真是糊作非为</li>
+						<li>海清穿格子西装气质干练 自推行李气场在线</li>
+						<li>甘薇贾跃亭疑离婚？成嫁豪门最惨女星，从万人捧月跌落到无人问津</li>
+						<li>李亚鹏与妈妈参加嫣然基金爱心活动 不见王菲李嫣</li>
+						<li>罗云熙称“女生多少斤都不胖”，然后说“公主抱的上限是杨紫”！</li>
+						<li>影视剧中钢铁直女神操作，比直男还要狠，真是太令人窒息了！</li>
+						<li>吴亦凡真是可可爱爱，在升降台候场个子太高根本藏不住！</li>
+						<li>郁可唯演出被观众扔了一把荧光棒，正好砸到头！</li>
+						<li>宋茜射箭合集，宋十环名不虚传！！</li>
+						<li>搜狐娱乐播报的直播全程回放</li>
+					</ol> -->
+						<img src="images/Hydrangeas.jpg"/>
+						<img src="images/Chrysanthemum.jpg"/>
+						<img src="images/Desert.jpg"/>
+						<img src="images/Koala.jpg"/>
+						<img src="images/Jellyfish.jpg"/>
+					
+				</div>
+				<div id="div_2"></div>
+			</div>
+		</div>
+		<script>
+			window.onload=function(){
+			var all=document.getElementById("all_div");
+			var div1=document.getElementById("div_1");
+			var div2=document.getElementById("div_2");
+			div2.innerHTML=div1.innerHTML;
+			var time=20;
+			var setId;
+			function ScrollUp(){
+				if(all.scrollTop>=div1.offsetHeight){
+					all.scrollTop=0;
+				}else{
+					all.scrollTop++;
+				}
+			}
+			setId=window.setInterval(ScrollUp,time);
+			all.onmouseover=function(){window.clearInterval(setId);}
+			all.onmouseout=function(){setId=window.setInterval(ScrollUp,time);}
+			}
+		</script>
+	</body>
+
+</html>
